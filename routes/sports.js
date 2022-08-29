@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 const router = express.Router();
 
 
-//if going to the route localhost:5000/
+//get it to run on the main page
 router.get('/', async function (req, res) {
 	const url ='https://sportscore1.p.rapidapi.com/sports';
 	const options = {
