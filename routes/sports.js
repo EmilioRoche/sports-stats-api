@@ -10,7 +10,7 @@ router.get('/', async function (req, res) {
 		method: 'GET',
 		headers: {
 			'X-RapidAPI-Host': 'sportscore1.p.rapidapi.com',
-			'X-RapidAPI-Key': ''
+			'X-RapidAPI-Key': ENV['API_KEY']
 		}
 	};
 	// fetches the url and gets the response as a json
