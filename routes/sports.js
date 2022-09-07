@@ -1,3 +1,4 @@
+const { response } = require('express');
 const express = require('express');
 const fetch = require('node-fetch');
 const router = express.Router();
@@ -5,6 +6,7 @@ const router = express.Router();
 
 //get it to run on the main page
 router.get('/', async function (req, res) {
+	res.header("Access-Control-Allow-Origin", "*");
 	const url ='https://sportscore1.p.rapidapi.com/sports';
 	const options = {
 		method: 'GET',
