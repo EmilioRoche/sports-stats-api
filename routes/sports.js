@@ -3,16 +3,19 @@ const express = require('express');
 const fetch = require('node-fetch');
 const router = express.Router();
 
+const url1 = 'https://sportscore1.p.rapidapi.com/sports';
+//const url2 =  'https://app.sportdataapi.com/api/v1/soccer/leagues'
+
 
 //get it to run on the main page
 router.get('/', async function (req, res) {
 	res.header("Access-Control-Allow-Origin", "*");
-	const url ='https://sportscore1.p.rapidapi.com/sports';
+	const url = url1;
 	const options = {
 		method: 'GET',
 		headers: {
 			'X-RapidAPI-Host': 'sportscore1.p.rapidapi.com',
-			'X-RapidAPI-Key': process.env.API_KEY
+			'X-RapidAPI-Key': process.env.API_KEY_2
 		}
 	};
 	// fetches the url and gets the response as a json
