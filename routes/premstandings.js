@@ -7,7 +7,7 @@ const url1 = 'https://sportscore1.p.rapidapi.com/seasons/18686/standings-tables'
 
 
 //get it to run on the football page when that url has been hit
-router.get('/Football', async function (req, res) {
+router.get('/', async function (req, res) {
 	res.header("Access-Control-Allow-Origin", "*");
 	const url = url1;
 	const options = {
