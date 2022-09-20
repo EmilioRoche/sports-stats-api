@@ -6,7 +6,6 @@ const router = express.Router();
 const url1 = 'https://sportscore1.p.rapidapi.com/seasons/15265/standings-tables';
 
 
-//get it to run on the football page when that url has been hit
 router.get('/', async function (req, res) {
 	res.header("Access-Control-Allow-Origin", "*");
 	const url = url1;
