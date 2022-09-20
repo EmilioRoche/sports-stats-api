@@ -3,7 +3,7 @@ const express = require('express');
 const fetch = require('node-fetch');
 const router = express.Router();
 
-const url1 = 'https://sportscore1.p.rapidapi.com/seasons/13379/standings-tables';
+const url1 = 'https://sportscore1.p.rapidapi.com/seasons/15265/standings-tables';
 
 
 //get it to run on the football page when that url has been hit
