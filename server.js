@@ -22,11 +22,11 @@ app.use('/Football/SerieA', seriestandings);
 
 
 const port = process.env.PORT || 3001;
-db.connect(() => {
+
     app.listen(port, () => {
         console.log(`Listening on Port: ${port}`)
     });
-});
+
 
 
     
