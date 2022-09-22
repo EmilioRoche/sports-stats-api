@@ -7,7 +7,6 @@ const ligastandings = require('./routes/ligastandings');
 const liguestandings = require('./routes/liguestandings');
 const seriestandings = require('./routes/seriestandings');
 const cplstandings = require('./routes/cplstandings');
-const db = require("./db");
 const cors = require('cors');
 
 const corsOptions = {
@@ -27,11 +26,10 @@ app.use('/Football/SerieA', seriestandings);
 
 
 const port = process.env.PORT || 3001;
-db.connect(() => {
-    app.listen(port, () => {
-        console.log(`Listening on Port: ${port}`)
-    });
-})
+
+app.listen(port, () => {
+    console.log(`Listening on Port: ${port}`)
+});
     
 
 
