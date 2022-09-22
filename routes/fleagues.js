@@ -2,17 +2,12 @@ const { response } = require('express');
 const express = require('express');
 const fetch = require('node-fetch');
 const router = express.Router();
-const db = require('../db');
+const MongoClient = require('mongodb').MongoClient;
 
-//const url1 = 'https://sportscore1.p.rapidapi.com/seasons/18686/standings-tables';
-
-
-//get it to run on the football page when that url has been hit
+//get it to run on the main page
 router.get('/', async function (req, res) {
-	const url = db.get().Collection('football-leagues').findOne({league:"England"});
-
 	res.header("Access-Control-Allow-Origin", "*");
-	//const url = url1;
+	const url = url1;
 	const options = {
 		method: 'GET',
 		headers: {
