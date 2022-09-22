@@ -10,8 +10,12 @@ const cplstandings = require('./routes/cplstandings');
 const db = require("./db");
 const cors = require('cors');
 
+const corsOptions = {
+    origin: '*',
+    optionsSuccessStatus: 200
+}
 app.use(express.json());
-//app.use(cors());
+app.use(cors(corsOptions));
 //we set it as default blank since we want it to load the sports list right away
 app.use('/', sports);
 app.use('/Football/Prem', premstandings);
