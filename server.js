@@ -20,12 +20,13 @@ app.use('/Football/Ligue1', liguestandings);
 app.use('/Football/CPL', cplstandings);
 app.use('/Football/SerieA', seriestandings);
 
+
+const port = process.env.PORT || 3001;
 db.connect(() => {
-    app.listen(process.env.PORT || 5555, function (){
-        console.log(`Listening`);
+    app.listen(port, () => {
+        console.log(`Listening on Port: ${port}`)
     });
 });
-const port = process.env.PORT || 3001;
-app.listen(port, () => {
-    console.log(`Listening on Port: ${port}`)
-});
+
+
+    
