@@ -7,16 +7,12 @@ const ligastandings = require('./routes/ligastandings');
 const liguestandings = require('./routes/liguestandings');
 const seriestandings = require('./routes/seriestandings');
 const cplstandings = require('./routes/cplstandings');
-const cors = require('cors');
 
-const corsOptions = {
-    origin: '*',
-    optionsSuccessStatus: 200
-}
+
 app.use(express.json());
-app.use(cors(corsOptions));
 //we set it as default blank since we want it to load the sports list right away
-app.use('/', sports);
+// will use this later on
+//app.use('/', sports);
 app.use('/Football/Prem', premstandings);
 app.use('/Football/LaLiga', ligastandings);
 app.use('/Football/Bundesliga', bundesstandings);

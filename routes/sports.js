@@ -2,7 +2,6 @@ const { response } = require('express');
 const express = require('express');
 const fetch = require('node-fetch');
 const router = express.Router();
-const MongoClient = require('mongodb').MongoClient;
 
 const url1 = 'https://sportscore1.p.rapidapi.com/sports';
 //const url2 =  'https://app.sportdataapi.com/api/v1/soccer/leagues'
