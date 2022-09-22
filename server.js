@@ -7,6 +7,7 @@ const ligastandings = require('./routes/ligastandings');
 const liguestandings = require('./routes/liguestandings');
 const seriestandings = require('./routes/seriestandings');
 const cplstandings = require('./routes/cplstandings');
+const db = require("./db");
 
 app.use(express.json());
 
@@ -19,5 +20,13 @@ app.use('/Football/Ligue1', liguestandings);
 app.use('/Football/CPL', cplstandings);
 app.use('/Football/SerieA', seriestandings);
 
+db.connect(() => {
+    app.listen(process.env.PORT || 5555, function (){
+        console.log(`Listening`);
+    });
+});
+
 const port = process.env.PORT || 3001;
-app.listen(port, () => console.log(`Listening on Port: ${port}`));
+app.listen(port, () => {
+    console.log(`Listening on Port: ${port}`)
+});
