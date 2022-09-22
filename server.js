@@ -11,7 +11,7 @@ const db = require("./db");
 const cors = require('cors');
 
 app.use(express.json());
-app.use(cors());
+//app.use(cors());
 //we set it as default blank since we want it to load the sports list right away
 app.use('/', sports);
 app.use('/Football/Prem', premstandings);
