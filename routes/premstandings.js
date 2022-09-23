@@ -2,6 +2,7 @@ const { response } = require('express');
 const express = require('express');
 const fetch = require('node-fetch');
 const router = express.Router();
+const db = require('../db');
 
 const url1 = 'https://sportscore1.p.rapidapi.com/seasons/18686/standings-tables';
 
