@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 //we set it as default blank since we want it to load the sports list right away
 // will use this later on
-app.use('/',sports);
+//app.use('/',sports);
 app.use('/Football/Prem', premstandings);
 app.use('/Football/LaLiga', ligastandings);
 app.use('/Football/Bundesliga', bundesstandings);

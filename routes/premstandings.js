@@ -11,8 +11,8 @@ const url1 = 'https://sportscore1.p.rapidapi.com/seasons/18686/standings-tables'
 router.get('/', async function (req, res) {
 
 	res.header("Access-Control-Allow-Origin", "*");
-	res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT,DELETE");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+	//res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT,DELETE");
+    //res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
 	const url = url1;
 	const options = {
 		method: 'GET',
