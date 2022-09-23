@@ -7,8 +7,9 @@ const ligastandings = require('./routes/ligastandings');
 const liguestandings = require('./routes/liguestandings');
 const seriestandings = require('./routes/seriestandings');
 const cplstandings = require('./routes/cplstandings');
+const cors = require('cors');
 
-
+app.use(cors());
 app.use(express.json());
 //we set it as default blank since we want it to load the sports list right away
 // will use this later on
