@@ -7,7 +7,7 @@ const ligastandings = require('./routes/ligastandings');
 const liguestandings = require('./routes/liguestandings');
 const seriestandings = require('./routes/seriestandings');
 const cplstandings = require('./routes/cplstandings');
-const leagues = require('./routes/leagues');
+const leagues = require('./services/leagues_service');
 const cors = require('cors');
 
 app.use(cors());

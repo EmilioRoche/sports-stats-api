@@ -1,12 +1,20 @@
 const db = require('./db');
+const express = require('express');
+const router = express.Router();
 
-db.query(`SELECT * FROM football_leagues;`, (err, res) => {
-    if (err) {
-        console.log("Error - Failed to select all from Football Leagues");
+db.connect();
+router.get('/', async function(req, res) { 
+
+    try {
+        db.connect();
+        let response = await db.query(`SELECT * FROM football_leagues;`);
+        db.end();
+        res.status(200).json(response.rows);
+    } catch (err) {
         console.log(err);
+		res.status(500).json({msg: `Internal Server Error.`});
     }
-    else{
-        console.log(res.rows);
-    }
+
 });
-module.exports = db;
+
+module.exports = router;
