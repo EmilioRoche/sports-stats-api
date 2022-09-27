@@ -7,7 +7,7 @@ router.get('/', async function(req, res) {
     try {
         db.connect();
         //put the db query into a service and this file into routes
-        let response = await db.query(`SELECT * FROM football_leagues;`);
+        let response = await db.query(`SELECT * FROM league_standings;`);
         db.end();
         res.status(200).json(response.rows);
     } catch (err) {
