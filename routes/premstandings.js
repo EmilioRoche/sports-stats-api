@@ -4,10 +4,8 @@ const db = require('../services/db');
 
 router.get('/', async function(req, res) { 
     try {
-        db.connect();
         //put the db query into a service and this file into routes
-        let response = await db.query(`SELECT * FROM prem_standings;`);
-        db.end();
+        let response = await db.query(`SELECT * FROM prem_standings ORDER BY position ASC;`);
         res.status(200).json(response.rows);
     } catch (err) {
         console.log(err);
