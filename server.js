@@ -9,6 +9,7 @@ const liguestandings = require('./routes/standings/liguestandings');
 const seriestandings = require('./routes/standings/seriestandings');
 const cplstandings = require('./routes/standings/cplstandings');
 const prem = require('./routes/teams/prem');
+const bundes = require('./routes/teams/bundes');
 const leagues = require('./routes/leagues');
 const cors = require('cors');
 
@@ -28,6 +29,7 @@ app.use('/Football/SerieA', seriestandings);
 app.use('/Football/Leagues', leagues);
 
 app.use('/Football/Prem/Teams', prem);
+app.use('/Football/Bundesliga/Teams', bundes);
 
 const port = process.env.PORT || 3001;
 app.listen(port, () => {
