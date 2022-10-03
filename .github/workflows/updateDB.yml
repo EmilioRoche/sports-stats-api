@@ -3,9 +3,7 @@
 
 name: updateStandingsDB
 
-on:
-  schedule:
-  - cron: '*/5 * * * *'
+on: push
 
 jobs:
   build-node:
