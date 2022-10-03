@@ -13,6 +13,13 @@ jobs:
     container: node:16
     steps:
       - name: git checkout
-        uses: actions/checkout@main
-      - name: prem
+        uses: actions/checkout@v3
+      - name: setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.13.x
+          cache: npm
+      - name: Install
+        run: npm
+      - name: Prem
         run: node update-standings/prem.js
