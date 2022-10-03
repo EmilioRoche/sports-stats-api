@@ -5,7 +5,7 @@ name: updateStandingsDB
 
 on:
   schedule:
-  - cron: '*/5 * * * *'
+  - cron: '*/1 * * * *'
 
 jobs:
   build-node:
@@ -13,7 +13,6 @@ jobs:
     container: node:16
     steps:
       - name: git checkout
-        uses: actions/checkout@v3
-        with: { ref: main }
-      - name: prem udpate
+        uses: actions/checkout@main
+      - name: prem
         run: node update-standings/prem.js
