@@ -21,7 +21,7 @@ jobs:
         run: |
           touch .env
           echo DATABASE_URL=${{ secrets.DATABASE_URL }} >> .env
-          echo API_KEY_3=${{ secrets.API_KEY }} >> .env
+          echo API_KEY_4=${{ secrets.API_KEY }} >> .env
           cat .env
       - name: Install
         run: npm ci
