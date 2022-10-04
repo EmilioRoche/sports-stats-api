@@ -3,7 +3,9 @@
 
 name: updateStandingsDB
 
-on: push
+on:
+  schedule:
+    - cron: '0 12 * * 1' #every monday at 12 (when leagues have finished playing their matchday)
 
 jobs:
   build-node:

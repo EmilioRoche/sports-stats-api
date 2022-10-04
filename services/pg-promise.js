@@ -18,7 +18,7 @@ async function MakeRequest(urlReturn, tableName) {
         url: urlReturn,
 		headers: {
 			'X-RapidAPI-Host': 'sportscore1.p.rapidapi.com',
-			'X-RapidAPI-Key': process.env.API_KEY_3
+			'X-RapidAPI-Key': process.env.API_KEY
 		}
 	};
     let res = await axios(options);
