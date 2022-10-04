@@ -22,6 +22,6 @@ jobs:
           echo API_KEY_3=${{ secrets.API_KEY }} >> .env
           cat .env
       - name: Install
-        run: npm install
+        run: npm ci
       - name: Prem
         run: node update-standings/prem.js
