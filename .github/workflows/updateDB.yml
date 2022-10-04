@@ -25,3 +25,13 @@ jobs:
         run: npm ci
       - name: Prem
         run: node update-standings/prem.js
+      - name: CPL
+        run: node update-standings/cpl.js
+      - name: Serie A
+        run: node update-standings/serie.js
+      - name: Ligue 1
+        run: node update-standings/ligue.js
+      - name: La Liga
+        run: node update-standings/laliga.js
+      - name: Bundesliga
+        run: node update-standings/bundesliga.js
