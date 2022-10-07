@@ -28,7 +28,20 @@ router.get('/Teams/:name', async function(req, res) {
     try {
         const name = req.params.name;
         //put the db query into a service and this file into routes
-        var sql = "SELECT * FROM team INNER JOIN player on team.team_id = player.team_id where team.team_id = " + name + ";"
+        var sql = "SELECT * FROM team WHERE team_id = " + name + ";"
+        let response = await db.query(sql);
+        res.status(200).json(response.rows);
+    } catch (err) {
+        console.log(err);
+		res.status(500).json({msg: `Internal Server Error.`});
+    }
+
+});
+router.get('/:name/Players', async function(req, res) { 
+    try {
+        const name = req.params.name;
+        //put the db query into a service and this file into routes
+        var sql = "SELECT * FROM player WHERE team_id = " + name + ";"
         let response = await db.query(sql);
         res.status(200).json(response.rows);
     } catch (err) {
