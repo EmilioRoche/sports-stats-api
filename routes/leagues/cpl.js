@@ -24,11 +24,11 @@ router.get('/Teams', async function(req, res) {
     }
 
 });
-router.get('/Teams/:id', async function(req, res) { 
+router.get('/Teams/:name', async function(req, res) { 
     try {
-        const id = req.params.id;
+        const name = req.params.name;
         //put the db query into a service and this file into routes
-        var sql = "SELECT * FROM team WHERE team_id = " + id + " ORDER BY name ASC;"
+        var sql = "SELECT * FROM team WHERE team_id = " + name + " ORDER BY name ASC;"
         let response = await db.query(sql);
         res.status(200).json(response.rows);
     } catch (err) {
