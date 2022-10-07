@@ -10,7 +10,6 @@ const ligue = require('./routes/leagues/ligue');
 const serie = require('./routes/leagues/serie');
 const cpl = require('./routes/leagues/cpl');
 const leagues = require('./routes/leagues');
-const teamInfo = require('./routes/teamInfo');
 const cors = require('cors');
 
 db.connect();
