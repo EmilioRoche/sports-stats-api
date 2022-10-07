@@ -24,4 +24,17 @@ router.get('/Teams', async function(req, res) {
     }
 
 });
+router.get('/Teams/:id', async function(req, res) { 
+    try {
+        const id = req.params.id;
+        //put the db query into a service and this file into routes
+        var sql = "SELECT * FROM team WHERE team_id = " + id + " ORDER BY name ASC;"
+        let response = await db.query(sql);
+        res.status(200).json(response.rows);
+    } catch (err) {
+        console.log(err);
+		res.status(500).json({msg: `Internal Server Error.`});
+    }
+
+});
 module.exports = router;
