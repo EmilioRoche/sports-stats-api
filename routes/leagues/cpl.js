@@ -16,7 +16,7 @@ router.get('/Standings', async function(req, res) {
 router.get('/Teams', async function(req, res) { 
     try {
         //put the db query into a service and this file into routes
-        let response = await db.query(`SELECT * FROM team WHERE league_id=317 ORDER BY team_name ASC;`);
+        let response = await db.query(`SELECT * FROM team WHERE league_id=435 ORDER BY team_name ASC;`);
         res.status(200).json(response.rows);
     } catch (err) {
         console.log(err);
