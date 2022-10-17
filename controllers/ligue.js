@@ -29,6 +29,7 @@ const teamName = async (req, res, next) => {
         const name = req.params.name;
         //put the db query into a service and this file into routes
         var sql = "SELECT team.team_name, team.league_id, team.logo, manager.manager_name, manager.photo, venue.stadium_name, venue.capacity, venue.country_name FROM team JOIN manager ON team.manager_id = manager.manager_id JOIN venue ON team.venue_id = venue.venue_id WHERE team_id = " + name + ";"
+        let response = await db.query(sql);
         res.status(200).json(response.rows);
     } catch (err) {
         console.log(err);
